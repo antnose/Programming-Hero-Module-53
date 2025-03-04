@@ -1,7 +1,10 @@
 const express = require("express");
 const phones = require("./phones.json");
 const app = express();
+var cors = require("cors");
 const port = 3001;
+
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.send("This is my phone server");
